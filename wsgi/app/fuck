@@ -1,0 +1,3 @@
+mkdir static
+ln -s ../../../../data/img/ static/img
+ln -s ../../../../data/im.p static/im.p

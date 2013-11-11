@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Dgr_dr</title>
+		<style type="text/css">
+			
+			@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+			@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+			*{
+				border:0px;
+				padding:0px;
+				margin:0px;
+			}
+
+			body{
+				min-width:400px;
+				background-color:#111111;
+				padding-top:30px;
+				padding-bottom:30px;
+			}
+
+			#head{
+				width:360px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+
+			#titletext{
+				font-family:'Share Tech', sans-serif;
+				font-size:120px;
+				color:#DFDFDF;
+			}
+
+			#subtext{
+				font-family:'Source Sans Pro', sans-serif;
+				font-size:24px;
+				color:#666666;
+				font-style:italic;
+				position:relative;
+			}
+
+			@media (min-width: 760px) {
+
+				#subtext{
+					left:240px;
+					top:-1em;
+				}
+
+				#scrollarea{
+					width:720px;
+					font-size:0px;
+					margin-left:auto;
+					margin-right:auto;
+					margin-top:20px;
+					margin-bottom:20px;
+				}
+			}
+
+			@media (max-width:760px) {
+
+				#subtext{
+					left:20px;
+				}
+
+				#scrollarea{
+					width:360px;
+					font-size:0px;
+					margin-left:auto;
+					margin-right:auto;
+					margin-top:20px;
+					margin-bottom:20px;
+				}
+			}
+
+			#scrollarea .tile{
+				width:160px;
+				height:20px;
+				overflow:hidden;
+				padding:10px;
+				display:inline-block;
+				position:relative;
+			}
+
+			img{
+				height:100%;
+				width:100%;
+
+				opacity:0.5;
+
+				-webkit-transition: opacity 0.1s ease-in-out;
+				-moz-transition: opacity 0.1s ease-in-out;
+				-o-transition: opacity 0.1s ease-in-out;
+				transition: opacity 0.1s ease-in-out;
+			}
+
+			#scrollarea .tile .views{
+				color:#DFDFDF;
+				font-size:12px;
+				font-family:"Share Tech", sans-serif;
+				text-align:right;
+				position:absolute;
+				bottom:10px;
+				left:12px;
+				opacity:1;
+
+				-webkit-transition: opacity 0.1s ease-in-out;
+				-moz-transition: opacity 0.1s ease-in-out;
+				-o-transition: opacity 0.1s ease-in-out;
+				transition: opacity 0.1s ease-in-out;
+			}
+
+
+            #upload {
+                display: block;
+                width: 100px;
+                text-align: center;
+                font-family: 'Share Tech', sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            #upload span {
+                display: inline-block;
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: skew(90deg);
+                transform: rotate(90deg);
+            }
+
+			#scrollarea .tile:hover img{
+				opacity:1.0;
+			}
+
+			#scrollarea .tile:hover .views{
+				opacity:0.0;
+			}
+
+			#edn{
+				color:#666;
+				margin-top:30px;
+				width:360px;
+				margin-left:auto;
+				margin-right:auto;
+				font-family:"Share Tech", sans-serif;
+			}
+
+			a{
+				color:#666;
+				text-decoration:none;
+			}
+			a:hover{color:#DFDFDF;}
+
+		</style>
+	</head>
+
+	<body>
+	
+        <div id="head">
+			<a href="/">
+				<div id="titletext">
+					Dgr_dr
+				</div>
+				<div id="subtext">
+					Wow so webapp
+				</div>
+			</a>
+	    </div>
+
+
+        <a href="/upload" id="upload">
+            UPLD
+        </a>
+
+		<div id="scrollarea">
+            {% for image, views in dic.iteritems() %}
+                <a href="/{{ image }}" class="tile">
+                    <img src="/i/{{ image }}.thumbnail">
+                    <p class='views'>{{ views }} views</p>
+				</a>
+            {% endfor %}
+		</div>
+
+		<div id="edn">
+			A pointless application by <a href="http://www.enigmasm.com"> Those Assholes At EnigmaSM </a>
+		</div>
+
+
+		
+	</body>
+
+
+</html>
