@@ -1,7 +1,7 @@
 Dgr_dr
 ======
 
-Dgr_dr (pronouned "degrader" or "DURR GA DURRRR", if you are so inclined) is a
+Dgr_dr (pronouned "degrader" or "DAH GURR DURRRRR", if you are so inclined) is a
 hack/art site/"totally serious counterculture app that's meant to challenge your ideas
 of like, images, and permanence, man" created during Y-Hack 2013.
 
